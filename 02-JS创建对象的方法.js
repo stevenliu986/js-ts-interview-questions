@@ -10,6 +10,11 @@ function Person01(name, age) {
   this.name = name;
   this.age = age;
 }
+
+// 在这个构造函数的原型上添加方法，这样所有它的实例都会继承这个方法
+Person01.prototype.say = function () {
+  console.log(`My name is ${this.name}`);
+};
 const person1 = new Person("John", 30);
 
 // 3. 使用Object.create()
@@ -51,3 +56,4 @@ const obj05 = { ...obj1, ...obj2 };
 
 // 7. 使用对象的原型
 const obj04 = Object.prototype; // 创建一个空对象，其原型为Object.prototype
+console.log(obj04);
