@@ -46,6 +46,8 @@ console.log(person02.getName(), person02.getAge());
 const obj1 = { name: "John" };
 const obj2 = { age: 30 };
 const obj03 = Object.assign({}, obj1, obj2);
+// 也可以使用...运算符来创建，但此时要注意key不能重复，否则会将前面的替换掉
+const obj05 = { ...obj1, ...obj2 };
 
 // 7. 使用对象的原型
 const obj04 = Object.prototype; // 创建一个空对象，其原型为Object.prototype
