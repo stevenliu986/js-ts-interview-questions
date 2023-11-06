@@ -195,3 +195,35 @@
     };
   }
 }
+
+// 使用ES6类的方式实现对象的继承
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  eat() {
+    console.log(this.name + "is eating!");
+  }
+
+  sleep() {
+    console.log(this.name + "is sleeping!");
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+
+  eat() {
+    console.log(this.name + " is eating fish!");
+  }
+}
+
+const cat = new Cat("Tom", 12);
+cat.eat();
+
+const animal = new Animal("Jerry");
+animal.eat();
